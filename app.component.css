@@ -7,11 +7,31 @@ p {
   }
   
   .blue {
-    background-color: blue;
+    background-color: rgb(220, 220, 252);
     height: 500px;
   }
   
   .green {
-    background-color: green;
+    background-color: rgb(214, 247, 214);
     height: 500px;
+  }
+  .column {
+    float: left;
+    padding: 30px;
+    
+  }
+  
+  .left {
+    width: 40%;
+  }
+  
+  .right {
+    width: 60%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
