@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'filetest';
+  title = 'Filetest';
   fileContent: string | ArrayBuffer = '';
-
+  fileName : string;
   public onChange(fileList: FileList): void {
     let file = fileList[0];
+    this.fileName = file.name;
     let fileReader: FileReader = new FileReader();
     let self = this;
     fileReader.onloadend = function(x) {
